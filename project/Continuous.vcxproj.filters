@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\mount\libevent-2.1.10-win\project\CMakeFiles\0f23f6c5106355b958b6b3650cc26132\Continuous.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mount\libevent-2.1.10-win\source\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\mount\libevent-2.1.10-win\project\CMakeFiles\Continuous" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0B149DAB-5E2F-322C-B616-1793A61F0AAA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

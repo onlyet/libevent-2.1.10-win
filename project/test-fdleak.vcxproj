@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{920F2DDC-10D3-35D8-97E3-8E831FBC8D9B}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>test-fdleak</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\mount\libevent-2.1.10-win\project\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">test-fdleak.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">test-fdleak</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\mount\libevent-2.1.10-win\project\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">test-fdleak.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">test-fdleak</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\mount\libevent-2.1.10-win\project\include;D:\mount\libevent-2.1.10-win\source\include;D:\mount\libevent-2.1.10-win\source\compat;D:\mount\libevent-2.1.10-win\source;D:\Software\OpenSSL-Win64\include;D:\mount\libevent-2.1.10-win\source\.\WIN32-Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;TINYTEST_LOCAL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;TINYTEST_LOCAL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\mount\libevent-2.1.10-win\project\include;D:\mount\libevent-2.1.10-win\source\include;D:\mount\libevent-2.1.10-win\source\compat;D:\mount\libevent-2.1.10-win\source;D:\Software\OpenSSL-Win64\include;D:\mount\libevent-2.1.10-win\source\.\WIN32-Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\mount\libevent-2.1.10-win\project\include;D:\mount\libevent-2.1.10-win\source\include;D:\mount\libevent-2.1.10-win\source\compat;D:\mount\libevent-2.1.10-win\source;D:\Software\OpenSSL-Win64\include;D:\mount\libevent-2.1.10-win\source\.\WIN32-Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\Software\OpenSSL-Win64\lib\VC\libssl64MDd.lib;D:\Software\OpenSSL-Win64\lib\VC\libcrypto64MDd.lib;ws2_32.lib;lib\Debug\event_extra.lib;lib\Debug\event_core.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/mount/libevent-2.1.10-win/project/lib/Debug/test-fdleak.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/mount/libevent-2.1.10-win/project/bin/Debug/test-fdleak.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\mount\libevent-2.1.10-win\project\include;D:\mount\libevent-2.1.10-win\source\include;D:\mount\libevent-2.1.10-win\source\compat;D:\mount\libevent-2.1.10-win\source;D:\Software\OpenSSL-Win64\include;D:\mount\libevent-2.1.10-win\source\.\WIN32-Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;TINYTEST_LOCAL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;TINYTEST_LOCAL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\mount\libevent-2.1.10-win\project\include;D:\mount\libevent-2.1.10-win\source\include;D:\mount\libevent-2.1.10-win\source\compat;D:\mount\libevent-2.1.10-win\source;D:\Software\OpenSSL-Win64\include;D:\mount\libevent-2.1.10-win\source\.\WIN32-Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\mount\libevent-2.1.10-win\project\include;D:\mount\libevent-2.1.10-win\source\include;D:\mount\libevent-2.1.10-win\source\compat;D:\mount\libevent-2.1.10-win\source;D:\Software\OpenSSL-Win64\include;D:\mount\libevent-2.1.10-win\source\.\WIN32-Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\Software\OpenSSL-Win64\lib\VC\libssl64MD.lib;D:\Software\OpenSSL-Win64\lib\VC\libcrypto64MD.lib;ws2_32.lib;lib\Release\event_extra.lib;lib\Release\event_core.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/mount/libevent-2.1.10-win/project/lib/Release/test-fdleak.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/mount/libevent-2.1.10-win/project/bin/Release/test-fdleak.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\mount\libevent-2.1.10-win\source\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/mount/libevent-2.1.10-win/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Software\cmake-3.15.1\bin\cmake.exe -SD:/mount/libevent-2.1.10-win/source -BD:/mount/libevent-2.1.10-win/project --check-stamp-file D:/mount/libevent-2.1.10-win/project/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCCompiler.cmake.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCCompilerABI.c;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCompilerIdDetection.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeConfigurableFile.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompileFeatures.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompilerABI.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompilerId.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineRCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeFindBinUtils.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeParseArguments.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCCompiler.cmake.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystem.cmake.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeTestCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeTestCompilerCommon.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeTestRCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CTest.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CTestTargets.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CTestUseLaunchers.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckCCompilerFlag.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckCXXSourceCompiles.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckFunctionExists.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFile.c.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFile.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFileCXX.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFiles.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckStructHasMember.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckSymbolExists.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckTypeSize.c.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckTypeSize.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckVariableExists.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CompilerId\VS-10.vcxproj.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\DartConfiguration.tcl.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindOpenSSL.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindPackageMessage.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindPythonInterp.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindZLIB.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Internal\FeatureTesting.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\3.15.1\CMakeCCompiler.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\3.15.1\CMakeSystem.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckIncludeFiles\EVENT__HAVE_IFADDRS_H.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_FD_MASK.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_SA_FAMILY_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_ADDRINFO.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_IN6_ADDR.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_LINGER.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_SOCKADDR_IN6.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_SOCKADDR_STORAGE.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_SOCKADDR_UN.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT16_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT32_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT64_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT8_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINTPTR_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_INT.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_LONG.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_LONG_LONG.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_OFF_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_PID_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_PTHREAD_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SHORT.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SIZE_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SOCKLEN_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SSIZE_T_LOWER.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SSIZE_T_UPPER.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_TIME_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_UNSIGNED.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_UNSIGNED_INT.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_VOID_P.c;D:\mount\libevent-2.1.10-win\source\cmake\AddCompilerFlags.cmake;D:\mount\libevent-2.1.10-win\source\cmake\AddEventLibrary.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckConstExists.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckFileOffsetBits.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckFunctionExistsEx.c;D:\mount\libevent-2.1.10-win\source\cmake\CheckFunctionExistsEx.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckFunctionKeywords.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckPrototypeDefinition.cmake;D:\mount\libevent-2.1.10-win\source\cmake\FindGit.cmake;D:\mount\libevent-2.1.10-win\source\cmake\LibeventConfig.cmake.in;D:\mount\libevent-2.1.10-win\source\cmake\LibeventConfigBuildTree.cmake.in;D:\mount\libevent-2.1.10-win\source\cmake\LibeventConfigVersion.cmake.in;D:\mount\libevent-2.1.10-win\source\cmake\VersionViaGit.cmake;D:\mount\libevent-2.1.10-win\source\evconfig-private.h.cmake;D:\mount\libevent-2.1.10-win\source\event-config.h.cmake;D:\mount\libevent-2.1.10-win\source\libevent.pc.in;D:\mount\libevent-2.1.10-win\source\libevent_core.pc.in;D:\mount\libevent-2.1.10-win\source\libevent_extra.pc.in;D:\mount\libevent-2.1.10-win\source\libevent_openssl.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\mount\libevent-2.1.10-win\project\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/mount/libevent-2.1.10-win/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Software\cmake-3.15.1\bin\cmake.exe -SD:/mount/libevent-2.1.10-win/source -BD:/mount/libevent-2.1.10-win/project --check-stamp-file D:/mount/libevent-2.1.10-win/project/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCCompiler.cmake.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCCompilerABI.c;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCompilerIdDetection.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeConfigurableFile.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompileFeatures.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompilerABI.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineCompilerId.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineRCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeFindBinUtils.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeParseArguments.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCCompiler.cmake.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystem.cmake.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeTestCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeTestCompilerCommon.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CMakeTestRCCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CTest.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CTestTargets.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CTestUseLaunchers.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckCCompilerFlag.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckCXXSourceCompiles.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckFunctionExists.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFile.c.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFile.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFileCXX.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckIncludeFiles.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckStructHasMember.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckSymbolExists.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckTypeSize.c.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckTypeSize.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CheckVariableExists.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\CompilerId\VS-10.vcxproj.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\DartConfiguration.tcl.in;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindOpenSSL.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindPackageMessage.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindPythonInterp.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\FindZLIB.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Internal\FeatureTesting.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;D:\Software\cmake-3.15.1\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\3.15.1\CMakeCCompiler.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\3.15.1\CMakeSystem.cmake;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckIncludeFiles\EVENT__HAVE_IFADDRS_H.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_FD_MASK.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_SA_FAMILY_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_ADDRINFO.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_IN6_ADDR.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_LINGER.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_SOCKADDR_IN6.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_SOCKADDR_STORAGE.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_STRUCT_SOCKADDR_UN.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT16_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT32_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT64_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINT8_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__HAVE_UINTPTR_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_INT.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_LONG.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_LONG_LONG.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_OFF_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_PID_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_PTHREAD_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SHORT.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SIZE_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SOCKLEN_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SSIZE_T_LOWER.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_SSIZE_T_UPPER.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_TIME_T.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_UNSIGNED.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_UNSIGNED_INT.c;D:\mount\libevent-2.1.10-win\project\CMakeFiles\CheckTypeSize\EVENT__SIZEOF_VOID_P.c;D:\mount\libevent-2.1.10-win\source\cmake\AddCompilerFlags.cmake;D:\mount\libevent-2.1.10-win\source\cmake\AddEventLibrary.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckConstExists.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckFileOffsetBits.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckFunctionExistsEx.c;D:\mount\libevent-2.1.10-win\source\cmake\CheckFunctionExistsEx.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckFunctionKeywords.cmake;D:\mount\libevent-2.1.10-win\source\cmake\CheckPrototypeDefinition.cmake;D:\mount\libevent-2.1.10-win\source\cmake\FindGit.cmake;D:\mount\libevent-2.1.10-win\source\cmake\LibeventConfig.cmake.in;D:\mount\libevent-2.1.10-win\source\cmake\LibeventConfigBuildTree.cmake.in;D:\mount\libevent-2.1.10-win\source\cmake\LibeventConfigVersion.cmake.in;D:\mount\libevent-2.1.10-win\source\cmake\VersionViaGit.cmake;D:\mount\libevent-2.1.10-win\source\evconfig-private.h.cmake;D:\mount\libevent-2.1.10-win\source\event-config.h.cmake;D:\mount\libevent-2.1.10-win\source\libevent.pc.in;D:\mount\libevent-2.1.10-win\source\libevent_core.pc.in;D:\mount\libevent-2.1.10-win\source\libevent_extra.pc.in;D:\mount\libevent-2.1.10-win\source\libevent_openssl.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\mount\libevent-2.1.10-win\project\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\mount\libevent-2.1.10-win\source\test\test-fdleak.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\mount\libevent-2.1.10-win\project\ZERO_CHECK.vcxproj">
+      <Project>{F9CCF6DC-E554-3C72-9D57-8E91D48A4BB7}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\mount\libevent-2.1.10-win\project\event_core_shared.vcxproj">
+      <Project>{2EE51D40-26E9-3352-8722-8F08038661B8}</Project>
+      <Name>event_core_shared</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\mount\libevent-2.1.10-win\project\event_extra_shared.vcxproj">
+      <Project>{ED6B7CF3-B336-307B-910F-1E0F968472D9}</Project>
+      <Name>event_extra_shared</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
