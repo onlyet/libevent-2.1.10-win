@@ -691,6 +691,7 @@ event_base_new_with_config(const struct event_config *cfg)
 
 		base->evsel = eventops[i];
 
+        //win32op*
 		base->evbase = base->evsel->init(base);
 	}
 

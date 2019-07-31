@@ -208,6 +208,7 @@ struct event_once {
 struct event_base {
 	/** Function pointers and other data to describe this event_base's
 	 * backend. */
+    //当前系统支持提供的操作，例如：win32ops，epollops
 	const struct eventop *evsel;
 	/** Pointer to backend-specific data. */
 	void *evbase;
