@@ -171,6 +171,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\mount\libevent-2.1.10-win\source\sample\hello-world.c" />
+    <ClCompile Include="new_hello_world.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\mount\libevent-2.1.10-win\project\ZERO_CHECK.vcxproj">

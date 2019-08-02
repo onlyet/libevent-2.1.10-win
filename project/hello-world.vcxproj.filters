@@ -4,6 +4,9 @@
     <ClCompile Include="D:\mount\libevent-2.1.10-win\source\sample\hello-world.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="new_hello_world.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\mount\libevent-2.1.10-win\source\CMakeLists.txt" />

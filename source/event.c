@@ -612,6 +612,7 @@ event_base_new_with_config(const struct event_config *cfg)
 	event_debug_mode_too_late = 1;
 #endif
 
+    //calloc会自动memset
 	if ((base = mm_calloc(1, sizeof(struct event_base))) == NULL) {
 		event_warn("%s: calloc", __func__);
 		return NULL;
@@ -642,9 +643,9 @@ event_base_new_with_config(const struct event_config *cfg)
 
 	min_heap_ctor_(&base->timeheap);
 
-	base->sig.ev_signal_pair[0] = -1;
+	base->sig.ev_signal_pair[0] = -1;   //用于信号事件
 	base->sig.ev_signal_pair[1] = -1;
-	base->th_notify_fd[0] = -1;
+	base->th_notify_fd[0] = -1;         //用于唤醒主线程
 	base->th_notify_fd[1] = -1;
 
 	TAILQ_INIT(&base->active_later_queue);

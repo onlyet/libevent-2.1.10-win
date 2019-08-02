@@ -50,24 +50,25 @@ main(int argc, char **argv)
 #endif
 
     //event_enable_debug_mode();
-    event_enable_debug_logging(EVENT_LOG_ERR);
+
+    //event_enable_debug_logging(EVENT_LOG_ERR);
 
     //告诉libEvent使用Windows线程
     //这句是必须的，不然会导致event_base_dispatch时一直处于Sleep状态，无法正常工作
-    evthread_use_windows_threads();
+    //evthread_use_windows_threads();
 
-    struct event_config* pConfig = event_config_new();
-    if (!pConfig)
-    {
-        return 1;
-    }
+    //struct event_config* pConfig = event_config_new();
+    //if (!pConfig)
+    //{
+    //    return 1;
+    //}
 
-    event_config_set_flag(pConfig, EVENT_BASE_FLAG_STARTUP_IOCP);
-    base = event_base_new_with_config(pConfig);
-    event_config_free(pConfig);
-    pConfig = NULL;
+    //event_config_set_flag(pConfig, EVENT_BASE_FLAG_STARTUP_IOCP);
+    //base = event_base_new_with_config(pConfig);
+    //event_config_free(pConfig);
+    //pConfig = NULL;
 
-	//base = event_base_new();
+	base = event_base_new();
 	if (!base) {
 		fprintf(stderr, "Could not initialize libevent!\n");
 		return 1;
@@ -104,44 +105,44 @@ main(int argc, char **argv)
 	return 0;
 }
 
-//static void
-//listener_cb(struct evconnlistener *listener, evutil_socket_t fd,
-//    struct sockaddr *sa, int socklen, void *user_data)
-//{
-//	struct event_base *base = user_data;
-//	struct bufferevent *bev;
-//    
-//    //bev = bufferevent_socket_new(base, fd, BEV_OPT_CLOSE_ON_FREE);
-//    bev = bufferevent_socket_new(base, fd, BEV_OPT_THREADSAFE);
-//	if (!bev) {
-//		fprintf(stderr, "Error constructing bufferevent!");
-//		event_base_loopbreak(base);
-//		return;
-//	}
-//	bufferevent_setcb(bev, NULL, conn_writecb, conn_eventcb, NULL);
-//	bufferevent_enable(bev, EV_WRITE);
-//	bufferevent_disable(bev, EV_READ);
-//
-//	bufferevent_write(bev, MESSAGE, strlen(MESSAGE));
-//}
-
-static void listener_cb(struct evconnlistener *listener, evutil_socket_t fd,
+static void
+listener_cb(struct evconnlistener *listener, evutil_socket_t fd,
     struct sockaddr *sa, int socklen, void *user_data)
 {
-    struct event_base *base = user_data;
-    struct bufferevent *bev;
+	struct event_base *base = user_data;
+	struct bufferevent *bev;
+    
+    bev = bufferevent_socket_new(base, fd, BEV_OPT_CLOSE_ON_FREE);
+    //bev = bufferevent_socket_new(base, fd, BEV_OPT_THREADSAFE);
+	if (!bev) {
+		fprintf(stderr, "Error constructing bufferevent!");
+		event_base_loopbreak(base);
+		return;
+	}
+	bufferevent_setcb(bev, NULL, conn_writecb, conn_eventcb, NULL);
+	bufferevent_enable(bev, EV_WRITE);
+	bufferevent_disable(bev, EV_READ);
 
-    //bev = bufferevent_socket_new(base, fd, BEV_OPT_CLOSE_ON_FREE);
-    bev = bufferevent_socket_new(base, fd, BEV_OPT_THREADSAFE);
-    if (!bev) {
-        fprintf(stderr, "Error constructing bufferevent!");
-        event_base_loopbreak(base);
-        return;
-    }
-    bufferevent_setcb(bev, conn_readcb, conn_writecb, conn_eventcb, NULL);
-    bufferevent_enable(bev, EV_WRITE);
-    bufferevent_enable(bev, EV_READ);
+	bufferevent_write(bev, MESSAGE, strlen(MESSAGE));
 }
+
+//static void listener_cb(struct evconnlistener *listener, evutil_socket_t fd,
+//    struct sockaddr *sa, int socklen, void *user_data)
+//{
+//    struct event_base *base = user_data;
+//    struct bufferevent *bev;
+//
+//    //bev = bufferevent_socket_new(base, fd, BEV_OPT_CLOSE_ON_FREE);
+//    bev = bufferevent_socket_new(base, fd, BEV_OPT_THREADSAFE);
+//    if (!bev) {
+//        fprintf(stderr, "Error constructing bufferevent!");
+//        event_base_loopbreak(base);
+//        return;
+//    }
+//    bufferevent_setcb(bev, conn_readcb, conn_writecb, conn_eventcb, NULL);
+//    bufferevent_enable(bev, EV_WRITE);
+//    bufferevent_enable(bev, EV_READ);
+//}
 
 
 static void conn_readcb(struct bufferevent *bev, void *user_data)
