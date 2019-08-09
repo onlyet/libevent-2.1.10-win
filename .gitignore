@@ -216,3 +216,4 @@ ModelManifest.xml
 *.VC
 /project/CMakeFiles
 /project/tmp
+project
